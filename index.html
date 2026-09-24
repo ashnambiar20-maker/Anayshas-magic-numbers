@@ -1,98 +1,35 @@
 <!doctype html>
 <html lang="en">
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
-<meta name="theme-color" content="#6d4aff">
-<meta name="apple-mobile-web-app-capable" content="yes">
-<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-<meta name="apple-mobile-web-app-title" content="Magic Numbers">
-<link rel="manifest" href="manifest.json">
-<link rel="apple-touch-icon" href="icon-192.png">
-<title>Anaysha's Magic Numbers</title>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="theme-color" content="#6d4aff"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-status-bar-style" content="black-translucent"><meta name="apple-mobile-web-app-title" content="Magic Numbers">
+<link rel="manifest" href="manifest.json"><link rel="apple-touch-icon" href="icon-192.png"><title>Anaysha's Magic Numbers</title>
 <style>
-:root{--bg:#0b1020;--card:#151d35;--card2:#1d2744;--text:#fff;--muted:#b9c2da;--accent:#9b7bff;--good:#6ee7b7}
-*{box-sizing:border-box}body{margin:0;font-family:system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;background:radial-gradient(circle at 20% 0%,#2b225c 0,#0b1020 42%);color:var(--text);min-height:100vh}
-main{max-width:760px;margin:auto;padding:20px 16px 40px}.top{display:flex;justify-content:space-between;gap:15px;align-items:flex-start}.brand{font-size:26px;font-weight:900}.designer{text-align:right;font-size:12px;color:var(--muted)}.designer b{color:#fff}
-.card{background:rgba(21,29,53,.94);border:1px solid #303b5b;border-radius:26px;padding:22px;box-shadow:0 18px 50px rgba(0,0,0,.25)}
-.progress{height:8px;background:#293452;border-radius:20px;overflow:hidden;margin-top:15px}.progress i{display:block;height:100%;background:linear-gradient(90deg,#9b7bff,#62d9ff);transition:.3s}
-.hero{text-align:center;padding:28px 4px}.heroicon{font-size:70px}.title{font-size:34px;font-weight:950;margin:8px 0}.muted{color:var(--muted)}label{font-size:14px;font-weight:700;display:block;margin:20px 0 7px}
-input{width:100%;padding:14px 15px;border-radius:14px;border:1px solid #3a4668;background:#10172b;color:white;font-size:16px;outline:none}button{font:inherit;color:inherit}
-.primary,.secondary,.choice,.world{border-radius:15px;min-height:48px;padding:13px 16px;font-weight:800;cursor:pointer}.primary{border:0;background:linear-gradient(135deg,#9b7bff,#6c8cff);color:white}.secondary{border:1px solid #394663;background:#10172b}.primary:active,.choice:active,.world:active{transform:scale(.98)}
-.grid{display:grid;grid-template-columns:repeat(2,1fr);gap:12px}.grid5{grid-template-columns:repeat(4,1fr)}.world{text-align:left;background:#11192d;border:1px solid #34415f;min-height:125px}.world .big{font-size:38px}.world.selected,.choice.selected{border-color:#a88cff;background:#30275b}.choice{background:#11192d;border:1px solid #34415f}.actions{text-align:right;margin-top:18px}
-.numbergrid{display:grid;grid-template-columns:repeat(5,1fr);gap:8px}.numbergrid .choice{padding:10px}
-.chest{font-size:48px;text-align:center;min-height:145px}
-.result{text-align:center}.orb{width:140px;height:140px;border-radius:50%;margin:22px auto;display:grid;place-items:center;font-size:56px;font-weight:950;background:radial-gradient(circle at 35% 25%,#fff,#d8cfff 25%,#765bff 75%);color:#241b52;border:6px solid #bcaaff;box-shadow:0 0 50px rgba(145,110,255,.55)}
-.trait{text-align:left;background:#11192d;border:1px solid #34415f;padding:14px;border-radius:14px;margin-top:9px}.designerbox{margin-top:18px;border:1px dashed #596785;border-radius:16px;padding:15px}.small{font-size:12px;color:var(--muted)}
-.badge{display:inline-block;background:#29224d;border:1px solid #5e4d9c;padding:7px 11px;border-radius:999px;margin:4px;font-size:13px}
-@media(max-width:430px){main{padding:12px 10px 28px}.card{padding:17px}.brand{font-size:21px}.title{font-size:29px}.grid5{grid-template-columns:repeat(2,1fr)}.numbergrid{grid-template-columns:repeat(4,1fr)}}
-</style>
-</head>
+:root{--bg:#090d1c;--card:#151d35;--card2:#202b4b;--text:#fff;--muted:#b9c2da;--accent:#9b7bff;--good:#6ee7b7;--gold:#ffd86b}*{box-sizing:border-box}body{margin:0;font-family:system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;background:radial-gradient(circle at 20% 0%,#38266e 0,#0b1020 42%);color:var(--text);min-height:100vh}main{max-width:760px;margin:auto;padding:14px 12px 42px}.card{background:rgba(21,29,53,.96);border:1px solid #303b5b;border-radius:28px;padding:20px;box-shadow:0 20px 60px rgba(0,0,0,.3);overflow:hidden}.top{display:flex;justify-content:space-between;gap:15px;align-items:flex-start}.brand{font-size:25px;font-weight:950}.designer{text-align:right;font-size:12px;color:var(--muted)}.designer b{color:#fff}.small{font-size:12px;color:var(--muted)}.progress{height:8px;background:#293452;border-radius:20px;overflow:hidden;margin-top:12px}.progress i{display:block;height:100%;background:linear-gradient(90deg,#9b7bff,#62d9ff);transition:.45s}.hero{text-align:center;padding:20px 3px 8px}.heroicon{font-size:72px;filter:drop-shadow(0 0 18px #a76cff);animation:float 2.4s ease-in-out infinite}.title{font-size:34px;font-weight:950;margin:7px 0}.muted{color:var(--muted)}label{font-size:14px;font-weight:800;display:block;margin:18px 0 7px}input{width:100%;padding:14px 15px;border-radius:14px;border:1px solid #3a4668;background:#10172b;color:#fff;font-size:16px;outline:none}button{font:inherit;color:inherit}.primary,.secondary,.choice,.world{border-radius:15px;min-height:48px;padding:13px 15px;font-weight:850;cursor:pointer}.primary{border:0;background:linear-gradient(135deg,#9b7bff,#6c8cff);color:#fff;box-shadow:0 10px 24px rgba(109,76,255,.25)}.secondary{border:1px solid #394663;background:#10172b}.choice{background:#11192d;border:1px solid #34415f}.choice.selected,.world.selected{border-color:#bcaaff;background:#30275b;box-shadow:0 0 0 2px rgba(188,170,255,.13)}button:active{transform:scale(.98)}.grid{display:grid;grid-template-columns:repeat(2,1fr);gap:12px}.world{text-align:left;background:#11192d;border:1px solid #34415f;min-height:125px}.world .big{font-size:38px}.character{font-size:58px;text-align:center;padding:14px 8px}.character b{display:block;font-size:16px}.actions{display:flex;gap:10px;justify-content:flex-end;margin-top:18px}.numbergrid{display:grid;grid-template-columns:repeat(5,1fr);gap:8px}.numbergrid .choice{padding:10px}.chest{font-size:54px;text-align:center;min-height:150px;position:relative}.chest.open{animation:chest 650ms ease}.challenge{background:#11192d;border:1px solid #34415f;border-radius:18px;padding:18px;text-align:center}.challenge .emoji{font-size:58px}.result{text-align:center}.orb{width:150px;height:150px;border-radius:50%;margin:22px auto;display:grid;place-items:center;font-size:62px;font-weight:950;background:radial-gradient(circle at 35% 25%,#fff,#d8cfff 25%,#765bff 75%);color:#241b52;border:6px solid #bcaaff;box-shadow:0 0 55px rgba(145,110,255,.6);animation:pulse 1.7s infinite}.trait{text-align:left;background:#11192d;border:1px solid #34415f;padding:14px;border-radius:14px;margin-top:9px}.designerbox{margin-top:18px;border:1px dashed #596785;border-radius:16px;padding:15px}.badge{display:inline-block;background:#29224d;border:1px solid #5e4d9c;padding:7px 11px;border-radius:999px;margin:4px;font-size:13px}.toolbar{display:flex;justify-content:space-between;align-items:center;margin-top:10px}.sound{border:1px solid #394663;background:#10172b;border-radius:999px;padding:7px 11px;font-size:13px}.toast{position:fixed;left:50%;bottom:22px;transform:translateX(-50%);background:#202b4b;border:1px solid #56658b;border-radius:999px;padding:10px 16px;z-index:5;animation:toast 1.8s forwards;box-shadow:0 10px 30px #0008}@keyframes float{50%{transform:translateY(-8px)}}@keyframes pulse{50%{transform:scale(1.035)}}@keyframes chest{50%{transform:rotate(-5deg) scale(1.08)}100%{transform:rotate(0) scale(1)}}@keyframes toast{0%,70%{opacity:1}100%{opacity:0}}@media(max-width:430px){main{padding:10px 8px 28px}.card{padding:16px}.brand{font-size:21px}.title{font-size:29px}.numbergrid{grid-template-columns:repeat(4,1fr)}.grid{grid-template-columns:1fr 1fr}}
+</style></head>
 <body><main><div class="card" id="app"></div></main>
 <script>
-(()=>{"use strict";
-const A=document.getElementById("app");
-const S={step:0,name:"",world:"",color:"",dob:"",number:0,stars:0};
-const worlds={
- forest:["🌳","Enchanted Forest","Fairies, hidden paths & magical creatures"],
- space:["🚀","Galaxy Quest","Planets, stars & cosmic adventures"],
- ocean:["🌊","Ocean Kingdom","Mermaids, treasures & underwater secrets"],
- candy:["🍭","Candy Kingdom","Sweet castles, rainbows & surprises"]
-};
+(()=>{"use strict";const A=document.getElementById("app");
+const worlds={forest:["🌳","Enchanted Forest","Fairies, hidden paths & magical creatures"],space:["🚀","Galaxy Quest","Planets, stars & cosmic adventures"],ocean:["🌊","Ocean Kingdom","Mermaids, treasures & underwater secrets"],candy:["🍭","Candy Kingdom","Sweet castles, rainbows & surprises"]};
+const chars=[["🧙‍♀️","Starlight Mage"],["🦸‍♀️","Sky Hero"],["🧚‍♀️","Forest Fairy"],["🤖","Robo Explorer"]];
 const colors=[["Pink","🌸"],["Blue","💧"],["Green","🍃"],["Purple","🔮"],["Yellow","☀️"],["Red","🔥"],["Orange","🍊"],["Black","🌙"]];
-const nums={
-1:["The Brave Starter","You love beginnings and exciting possibilities.","🚀"],
-2:["The Kind Heart","You notice people and care about friendship.","💖"],
-3:["The Idea Machine","Your imagination is always inventing something.","💡"],
-4:["The Builder","You enjoy plans, puzzles and making things work.","🧱"],
-5:["The Explorer","Adventure and discovery are hard to resist.","🧭"],
-6:["The Helper","Helping someone can make your day brighter.","🤝"],
-7:["The Mystery Solver","Questions and secrets make you curious.","🔍"],
-8:["The Leader","When something matters, you can be determined.","👑"],
-9:["The Dreamer","Your imagination can turn ordinary moments magical.","☁️"],
-10:["The Achiever","You enjoy goals and seeing yourself improve.","🏆"],
-11:["The Intuitive","You often enjoy following your first feeling.","✨"],
-12:["The Connector","You enjoy bringing people and ideas together.","🌈"],
-13:["The Inventor","You like creating things in your own way.","🛠️"],
-14:["The Adventurer","Interesting experiences call your name.","🎒"],
-15:["The Big Heart","You care deeply about the people you love.","❤️"],
-16:["The Puzzle Master","Your brain enjoys figuring things out.","🧩"],
-17:["The Champion","You can keep going when something gets difficult.","🥇"],
-18:["The Storyteller","You can turn little moments into memorable stories.","📖"],
-19:["The Firefly","You have a bright spark people notice.","🪄"],
-20:["The Superstar","Big imagination and possibilities excite you.","⭐"]
-};
-function header(){return `<div class="top"><div><div class="small">A PERSONALITY ADVENTURE</div><div class="brand">✨ Anaysha's Magic Numbers</div></div><div class="designer">🎨 Designed by<br><b>Anaysha</b></div></div>`}
-function bar(n){return n?`<div class="small" style="margin-top:15px">MAGIC JOURNEY · STEP ${n} OF 6</div><div class="progress"><i style="width:${n/6*100}%"></i></div>`:""}
-function render(){
- let h=header();
- if(S.step===0){A.innerHTML=h+`<section class="hero"><div class="heroicon">🔮</div><div class="title">The Magic Journey</div><p class="muted">Choose your world, discover clues, collect stars and reveal your special Magic Number.</p><label>Adventurer name</label><input id="name" maxlength="20" placeholder="What should we call you?"><button class="primary" id="start" style="margin-top:18px;width:100%">Start My Adventure ✨</button></section><p class="small" style="text-align:center">A playful imagination game — not a scientific personality test.</p>`;return bind()};
- if(S.step===1){A.innerHTML=h+bar(1)+`<h2>🗺️ Choose your world</h2><p class="muted">Where will your adventure begin?</p><div class="grid">${Object.entries(worlds).map(([k,v])=>`<button class="world ${S.world===k?"selected":""}" data-world="${k}"><div class="big">${v[0]}</div><b>${v[1]}</b><div class="small">${v[2]}</div></button>`).join("")}</div>`}
- if(S.step===2){A.innerHTML=h+bar(2)+`<h2>🎨 Choose your magic colour</h2><p class="muted">Trust your first choice!</p><div class="grid">${colors.map(c=>`<button class="choice ${S.color===c[0]?"selected":""}" data-color="${c[0]}">${c[1]} ${c[0]}</button>`).join("")}</div>`}
- if(S.step===3){A.innerHTML=h+bar(3)+`<h2>🎂 Enter your birthday</h2><p class="muted">The birthday clue adds a little extra magic.</p><input id="dob" type="date" value="${S.dob}" style="margin-top:18px"><div class="actions"><button class="primary" id="dobgo">Unlock the clue →</button></div>`}
- if(S.step===4){A.innerHTML=h+bar(4)+`<h2>🎁 Mystery Chest</h2><p class="muted">Choose one chest. Every chest gives you a surprise.</p><div class="grid" style="margin-top:18px">${["🧰","🎁","📦"].map((x,i)=>`<button class="world chest" data-chest="${i}">${x}<div class="small">MYSTERY</div></button>`).join("")}</div>`}
- if(S.step===5){A.innerHTML=h+bar(5)+`<h2>🔢 The Final Choice</h2><p class="muted">Pick your favourite number from 1 to 20. Trust your first choice!</p><div class="numbergrid" style="margin-top:18px">${Array.from({length:20},(_,i)=>i+1).map(n=>`<button class="choice" data-number="${n}">${n}</button>`).join("")}</div>`}
- if(S.step===6) result();
- bind();
-}
-function bind(){
- document.getElementById("start")?.addEventListener("click",()=>{S.name=document.getElementById("name").value.trim()||"Mystery Adventurer";S.step=1;render()});
- document.querySelectorAll("[data-world]").forEach(b=>b.addEventListener("click",()=>{S.world=b.dataset.world;S.stars++;S.step=2;render()}));
- document.querySelectorAll("[data-color]").forEach(b=>b.addEventListener("click",()=>{S.color=b.dataset.color;S.stars++;S.step=3;render()}));
- document.getElementById("dobgo")?.addEventListener("click",()=>{const v=document.getElementById("dob").value;if(!v)return;S.dob=v;S.step=4;render()});
- document.querySelectorAll("[data-chest]").forEach(b=>b.addEventListener("click",()=>{S.stars+=2;S.step=5;render()}));
- document.querySelectorAll("[data-number]").forEach(b=>b.addEventListener("click",()=>{S.number=+b.dataset.number;S.step=6;render()}));
-}
-function result(){
- const sum=S.dob.replaceAll("-","").split("").reduce((a,b)=>a+Number(b),0);
- const magic=((sum+S.number+S.stars)%20)||20;
- const n=nums[magic],w=worlds[S.world],lc=colors[(magic+S.number)%colors.length];
- const badges=S.stars>=4?["🌟 Star Collector","🔮 Magic Explorer"]:["✨ Magic Explorer"];
- A.innerHTML=header()+bar(6)+`<section class="result"><div style="font-size:48px;margin-top:22px">${w[0]}</div><div class="small">${w[1].toUpperCase()}</div><h2>${S.name}'s Magic Card</h2><div class="orb">${magic}</div><div style="font-size:40px">${n[2]}</div><h3 style="font-size:23px;margin:8px 0">${n[0]}</h3><p class="muted">${n[1]}</p><div class="trait">💖 <b>Magic colour:</b> ${S.color}</div><div class="trait">🍀 <b>Lucky colour:</b> ${lc[1]} ${lc[0]}</div><div class="trait">⭐ <b>Stars collected:</b> ${S.stars}</div><div style="margin-top:13px">${badges.map(x=>`<span class="badge">${x}</span>`).join("")}</div><div class="designerbox"><div class="small">GAME DESIGNER</div><b>🎨 Anaysha</b><div class="small">Creator of Anaysha's Magic Numbers</div></div><button class="primary" id="again" style="margin-top:18px;width:100%">🔄 New Adventure</button></section>`;
- document.getElementById("again").addEventListener("click",()=>{Object.assign(S,{step:0,name:"",world:"",color:"",dob:"",number:0,stars:0});render()});
-}
-render();
-if("serviceWorker" in navigator) window.addEventListener("load",()=>navigator.serviceWorker.register("service-worker.js").catch(()=>{}));
-})();
-</script>
-</body></html>
+const nums={1:["The Brave Starter","You love beginnings and exciting possibilities.","🚀"],2:["The Kind Heart","You notice people and care about friendship.","💖"],3:["The Idea Machine","Your imagination is always inventing something.","💡"],4:["The Builder","You enjoy plans, puzzles and making things work.","🧱"],5:["The Explorer","Adventure and discovery are hard to resist.","🧭"],6:["The Helper","Helping someone can make your day brighter.","🤝"],7:["The Mystery Solver","Questions and secrets make you curious.","🔍"],8:["The Leader","When something matters, you can be determined.","👑"],9:["The Dreamer","Your imagination can turn ordinary moments magical.","☁️"],10:["The Achiever","You enjoy goals and seeing yourself improve.","🏆"],11:["The Intuitive","You often enjoy following your first feeling.","✨"],12:["The Connector","You enjoy bringing people and ideas together.","🌈"],13:["The Inventor","You like creating things in your own way.","🛠️"],14:["The Adventurer","Interesting experiences call your name.","🎒"],15:["The Big Heart","You care deeply about the people you love.","❤️"],16:["The Puzzle Master","Your brain enjoys figuring things out.","🧩"],17:["The Champion","You can keep going when something gets difficult.","🥇"],18:["The Storyteller","You can turn little moments into memorable stories.","📖"],19:["The Firefly","You have a bright spark people notice.","🪄"],20:["The Superstar","Big imagination and possibilities excite you.","⭐"]};
+const challenges=[{q:"Which one is different?",items:["🍎","🍎","🍎","🚀"],a:3},{q:"Which number completes the pattern? 2, 4, 6, ?",items:["7","8","9","10"],a:1},{q:"Which creature belongs in the ocean?",items:["🐬","🦁","🐼","🦊"],a:0},{q:"Which shape has 3 sides?",items:["🔵 Circle","🔺 Triangle","⬜ Square","⭐ Star"],a:1}];
+let S=JSON.parse(localStorage.getItem("anm-v2")||"null")||{step:0,name:"",world:"",char:0,color:"",dob:"",number:0,stars:0,chest:0,challenge:0,challengeDone:false,sound:true};
+function save(){localStorage.setItem("anm-v2",JSON.stringify(S))}function beep(freq=660,dur=.08){if(!S.sound)return;try{const c=new (window.AudioContext||window.webkitAudioContext)(),o=c.createOscillator(),g=c.createGain();o.frequency.value=freq;o.type="sine";g.gain.value=.045;o.connect(g);g.connect(c.destination);o.start();o.stop(c.currentTime+dur)}catch(e){}}
+function toast(t){const d=document.createElement("div");d.className="toast";d.textContent=t;document.body.appendChild(d);setTimeout(()=>d.remove(),1900)}
+function header(){return `<div class="top"><div><div class="small">A PERSONALITY ADVENTURE · V2</div><div class="brand">✨ Anaysha's Magic Numbers</div></div><div class="designer">🎨 Designed by<br><b>Anaysha</b></div></div><div class="toolbar"><span class="small">⭐ ${S.stars} stars</span><button class="sound" id="sound">${S.sound?"🔊 Sound":"🔇 Muted"}</button></div>`}
+function bar(n){return `<div class="small" style="margin-top:12px">MAGIC JOURNEY · STEP ${n} OF 8</div><div class="progress"><i style="width:${n/8*100}%"></i></div>`}
+function render(){let h=header();if(S.step===0){A.innerHTML=h+`<section class="hero"><div class="heroicon">🔮</div><div class="title">The Magic Journey</div><p class="muted">Choose a hero, explore a world, solve a challenge, open a mystery chest and reveal your Magic Number.</p><label>Adventurer name</label><input id="name" maxlength="20" value="${S.name}" placeholder="What should we call you?"><button class="primary" id="start" style="margin-top:18px;width:100%">Start My Adventure ✨</button></section><p class="small" style="text-align:center">A playful imagination game — not a scientific personality test.</p>`;bind();return}
+if(S.step===1)A.innerHTML=h+bar(1)+`<h2>🧙 Choose your adventurer</h2><p class="muted">Pick the hero who will travel with you.</p><div class="grid">${chars.map((c,i)=>`<button class="world character ${S.char===i?"selected":""}" data-char="${i}">${c[0]}<b>${c[1]}</b><span class="small">Your adventure buddy</span></button>`).join("")}</div>`;
+if(S.step===2)A.innerHTML=h+bar(2)+`<h2>🗺️ Choose your world</h2><p class="muted">Where will your adventure begin?</p><div class="grid">${Object.entries(worlds).map(([k,v])=>`<button class="world ${S.world===k?"selected":""}" data-world="${k}"><div class="big">${v[0]}</div><b>${v[1]}</b><div class="small">${v[2]}</div></button>`).join("")}</div>`;
+if(S.step===3)A.innerHTML=h+bar(3)+`<h2>🎨 Choose your magic colour</h2><p class="muted">Trust your first choice!</p><div class="grid">${colors.map(c=>`<button class="choice ${S.color===c[0]?"selected":""}" data-color="${c[0]}">${c[1]} ${c[0]}</button>`).join("")}</div>`;
+if(S.step===4)A.innerHTML=h+bar(4)+`<h2>🧩 Magic Mini-Challenge</h2><div class="challenge"><div class="emoji">${["🧠","🔢","🐬","🔺"][S.challenge]}</div><h3>${challenges[S.challenge].q}</h3><div class="grid">${challenges[S.challenge].items.map((x,i)=>`<button class="choice" data-answer="${i}">${x}</button>`).join("")}</div></div>`;
+if(S.step===5)A.innerHTML=h+bar(5)+`<h2>🎂 Birthday clue</h2><p class="muted">Add your birthday to unlock another piece of the magic.</p><input id="dob" type="date" value="${S.dob}" style="margin-top:18px"><div class="actions"><button class="primary" id="dobgo">Unlock the clue →</button></div>`;
+if(S.step===6)A.innerHTML=h+bar(6)+`<h2>🎁 Mystery Chest</h2><p class="muted">Choose one chest. Every chest has a reward.</p><div class="grid" style="margin-top:18px">${["🧰","🎁","📦"].map((x,i)=>`<button class="world chest" data-chest="${i}">${x}<div class="small">MYSTERY CHEST</div></button>`).join("")}</div>`;
+if(S.step===7)A.innerHTML=h+bar(7)+`<h2>🔢 The Final Choice</h2><p class="muted">Pick your favourite number from 1 to 20. Trust your first choice!</p><div class="numbergrid" style="margin-top:18px">${Array.from({length:20},(_,i)=>i+1).map(n=>`<button class="choice" data-number="${n}">${n}</button>`).join("")}</div>`;
+if(S.step===8)result();bind()}
+function bind(){document.getElementById("sound")?.addEventListener("click",()=>{S.sound=!S.sound;save();render()});document.getElementById("start")?.addEventListener("click",()=>{S.name=document.getElementById("name").value.trim()||"Mystery Adventurer";S.step=1;S.stars=0;save();beep(700);render()});document.querySelectorAll("[data-char]").forEach(b=>b.addEventListener("click",()=>{S.char=+b.dataset.char;S.stars++;S.step=2;save();beep(760);render()}));document.querySelectorAll("[data-world]").forEach(b=>b.addEventListener("click",()=>{S.world=b.dataset.world;S.stars++;S.step=3;save();beep(800);render()}));document.querySelectorAll("[data-color]").forEach(b=>b.addEventListener("click",()=>{S.color=b.dataset.color;S.stars++;S.step=4;save();beep(840);render()}));document.querySelectorAll("[data-answer]").forEach(b=>b.addEventListener("click",()=>{const ok=+b.dataset.answer===challenges[S.challenge].a;if(ok){S.stars+=2;S.challengeDone=true;toast("🎉 Correct! +2 stars");beep(980,.15)}else{toast("✨ Nice try! The adventure continues");beep(420,.12)}S.step=5;save();setTimeout(render,250)}));document.getElementById("dobgo")?.addEventListener("click",()=>{const v=document.getElementById("dob").value;if(!v){toast("🎂 Choose your birthday first");return}S.dob=v;S.step=6;save();beep(880);render()});document.querySelectorAll("[data-chest]").forEach(b=>b.addEventListener("click",()=>{b.classList.add("open");S.chest=+b.dataset.chest;S.stars+=2;save();beep(1040,.15);toast(["💎 You found a Crystal!","🌟 You found a Star Gem!","🪄 You found a Magic Wand!"][S.chest]);setTimeout(()=>{S.step=7;render()},650)}));document.querySelectorAll("[data-number]").forEach(b=>b.addEventListener("click",()=>{S.number=+b.dataset.number;S.step=8;save();beep(1100,.18);render()}))}
+function result(){const sum=S.dob.replaceAll("-","").split("").reduce((a,b)=>a+Number(b),0);const magic=((sum+S.number+S.stars+S.char)%20)||20;const n=nums[magic],w=worlds[S.world],lc=colors[(magic+S.number)%colors.length];let badges=[];if(S.stars>=7)badges.push("🏆 Adventure Champion");if(S.challengeDone)badges.push("🧩 Puzzle Master");if(S.stars>=5)badges.push("🌟 Star Collector");badges.push("🔮 Magic Explorer");A.innerHTML=header()+bar(8)+`<section class="result"><div style="font-size:52px;margin-top:18px">${chars[S.char][0]} ${w[0]}</div><div class="small">${w[1].toUpperCase()}</div><h2>${S.name}'s Magic Card</h2><div class="orb">${magic}</div><div style="font-size:40px">${n[2]}</div><h3 style="font-size:23px;margin:8px 0">${n[0]}</h3><p class="muted">${n[1]}</p><div class="trait">🧙 <b>Adventurer:</b> ${chars[S.char][0]} ${chars[S.char][1]}</div><div class="trait">🎨 <b>Magic colour:</b> ${S.color}</div><div class="trait">🍀 <b>Lucky colour:</b> ${lc[1]} ${lc[0]}</div><div class="trait">⭐ <b>Stars collected:</b> ${S.stars}</div><div style="margin-top:13px">${badges.map(x=>`<span class="badge">${x}</span>`).join("")}</div><div class="designerbox"><div class="small">GAME DESIGNER</div><b>🎨 Anaysha</b><div class="small">Creator of Anaysha's Magic Numbers</div></div><button class="primary" id="again" style="margin-top:18px;width:100%">🔄 New Adventure</button></section>`;document.getElementById("again").addEventListener("click",()=>{localStorage.removeItem("anm-v2");location.reload()})}
+render();if("serviceWorker" in navigator)window.addEventListener("load",()=>navigator.serviceWorker.register("service-worker.js").catch(()=>{}));
+})();</script></body></html>
