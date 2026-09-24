@@ -1,0 +1,13 @@
+{
+  "name": "Anaysha's Magic Numbers",
+  "short_name": "Magic Numbers",
+  "start_url": "./",
+  "display": "standalone",
+  "background_color": "#0b1020",
+  "theme_color": "#6d4aff",
+  "description": "A personality adventure game designed by Anaysha.",
+  "icons": [
+    {"src":"icon-192.png","sizes":"192x192","type":"image/png","purpose":"any maskable"},
+    {"src":"icon-512.png","sizes":"512x512","type":"image/png","purpose":"any maskable"}
+  ]
+}
